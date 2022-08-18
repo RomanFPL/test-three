@@ -5,6 +5,9 @@ const geometrySelector =
   document.querySelector<HTMLInputElement>("#selected-geometry");
 const geometrySizeSelector =
   document.querySelector<HTMLInputElement>("#selected-size");
+const idsBlock = document.querySelector("#ids-list");
+
+const currentGeometryList = [];
 
 button?.addEventListener("click", () => {
   if (!geometrySelector || !geometrySizeSelector) return;
@@ -32,6 +35,11 @@ button?.addEventListener("click", () => {
   object.position.set(0, 0, 0);
 
   camera.position.z = 5;
+
+  const elemId = document.createElement("div");
+  elemId.innerText = object.uuid;
+
+  idsBlock?.append(elemId);
 
   function animate() {
     requestAnimationFrame(animate);
