@@ -35,4 +35,9 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  & span {
+    border-bottom: red solid 1px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

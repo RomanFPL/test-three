@@ -7,8 +7,6 @@ const geometrySizeSelector =
   document.querySelector<HTMLInputElement>("#selected-size");
 const idsBlock = document.querySelector("#ids-list");
 
-const currentGeometryList = [];
-
 button?.addEventListener("click", () => {
   if (!geometrySelector || !geometrySizeSelector) return;
   const size = +geometrySizeSelector.value || 1;
@@ -37,7 +35,7 @@ button?.addEventListener("click", () => {
   camera.position.z = 5;
 
   const elemId = document.createElement("div");
-  elemId.innerText = object.uuid;
+  elemId.innerHTML = `${object.uuid} <span>X</span>`;
 
   idsBlock?.append(elemId);
 
