@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
-</body>
-
+    <div class="input">
+      <select name="select" id="selected-geometry">
+        <option value="cube">Куб</option>
+        <option value="sphere">Сфера</option>
+        <option value="piramide">Пирамида</option>
+      </select>
+      <input type="number" id="selected-size" />
+      <button id="cretion-button">Create</button>
+    </div>
+  </body>
 </html>
