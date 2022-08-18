@@ -18,7 +18,7 @@ export class App
         this.scene = new Scene();
 
         const texture = new TextureLoader().load("images/textures/crate.gif");
-        const geometry = new BoxGeometry(200, 200, 200);
+        const geometry = new BoxGeometry(20, 20, 20);
         const material = new MeshBasicMaterial({ map: texture });
 
         this.mesh = new Mesh(geometry, material);
